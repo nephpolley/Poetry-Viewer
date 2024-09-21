@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Poem Viewer using the PoetryDB database">
+    	<!-- <meta name="keywords" content="one, two, three"> -->
+
+		<title>Poetry Viewer</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<main>
+			<section id="container">
+				<h1>Poem Viewer</h1>
+				<input type="text" placeholder="Title">
+				<a class="button" id="get-poem-btn">Get Poem</a>
+
+
+				<section id="poem-view">
+					<section id="title-scroll">
+						<a class="button scroll-btn" id="scroll-left-btn"><</a>
+						<h2 id="poem-title"></h2>
+						<a class="button scroll-btn" id="scroll-right-btn">></a>
+					</section>
+					
+					<h3 id="poem-author"></h3>
+					<section id="poem-lines"></section>
+				</section>
+			</section>
+			
+			<section id="info">
+				<p>Made by <a href="https://github.com/nephpolley">Neph Polley</a></p>
+				<p>API Used: <a href="https://poetrydb.org" target="_blank">PoetryDB</a></p>
+			</section>
+		</main>
+
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
