@@ -44,6 +44,7 @@ function getPoems(){
       })
       .catch(err => {
           console.log(`error ${err}`)
+          alert("No poems were found matching that title.")
       });
 }
 
