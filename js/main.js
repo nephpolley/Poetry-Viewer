@@ -119,7 +119,7 @@ function updatePoemInDOM() {
 function hideScrollButton(side) {
   scrollButtons.forEach((el) => {
     if (el.id == `scroll-${side}-btn`) {
-      el.style.visibility = "hidden"
+      el.classList.add("hidden")
     }
   })
 }
@@ -134,7 +134,7 @@ function hideScrollButtons() {
 function showScrollButton(side) {
   scrollButtons.forEach((el) => {
     if (el.id == `scroll-${side}-btn`) {
-      el.style.visibility = "visible"
+      el.classList.remove("hidden")
     }
   })
 }
@@ -148,3 +148,4 @@ function showScrollButtons() {
 
 
 
+hideScrollButtons()

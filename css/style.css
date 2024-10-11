@@ -19,46 +19,87 @@ img{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-:root {
-  --main-color: #730071;
-  --accent-color: #CC92C2;
-  --light-color: #eecfde;
-  --accent-color-2: #AA7BC3;
-  --text-color: #390040;
+:root{
+  --background-color: #f0f0f5;
+  --container-background-color: #e6e6f2;
+  --border-color: #d1c4e9;
+  --dark-background-color: #6a0dad;
+  --dark-hover-color: #4b0082;
+  --dark-text-color: #3c003c;
 }
 
 
+/* General Page Styling */
 body {
-  background: var(--main-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-color);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-main {
-  background: var(--accent-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  border-radius: 10px;
+  font-family: 'Georgia', serif;
+  background-color: var(--background-color);
+  color: var(--dark-text-color);
+  margin: 0;
+  padding: 0;
 }
 
 #container {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  gap: 1vh;
+  width: min(80%, 1000px);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--container-background-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#poem-view {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#poem-lines p {
+  margin: 0 0 20px;
+  line-height: 1.6;
+  font-size: 1.2em;
+  color: var(--dark-text-color);
 }
 
 
 
 
+
+/* Scroll Buttons */
+
+
+#title-scroll {
+  display: flex;
+  width: 100%;
+}
+
+#poem-title {
+  width: 80%;
+  text-align: center;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 1.1em;
+  background-color: var(--dark-background-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--dark-hover-color);
+  cursor: pointer;
+}
+
+.scroll-btn {
+  align-self: center;
+}
 
 
 .line-break {
@@ -69,54 +110,30 @@ main {
 }
 
 
-.button {
-  background: var(--light-color);
-  color: var(--text-color);
-  border: var(--text-color) solid 2px;
-  border-radius: 5px;
+/* Footer Styles */
+footer {
+  background-color: var(--dark-background-color);
+  padding: 20px;
   text-align: center;
-  padding: 5px;
-  cursor: pointer;
-  user-select: none;
-  font-weight: bolder;
+  color: #fff;
 }
 
-.button:hover {
-  background-color: var(--accent-color-2);
+footer p {
+  margin: 10px 0;
 }
 
-a {
-  color: var(--light-color);
+footer a {
+  color: #e0b3ff; /* Soft lavender for links */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-#poem-lines {
-  text-align: left;
-}
-
-
-#poem-view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+footer a:hover {
+  color: #ebceff; /* Slightly lighter purple on hover */
 }
 
 
-#title-scroll {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  justify-content: space-between;
-  width: 100%;
-}
 
-.scroll-btn {
-  height: 10%;
+.hidden {
   visibility: hidden;
-}
-
-input {
-  background: var(--light-color);
-  border: 2px solid var(--main-color)
 }
